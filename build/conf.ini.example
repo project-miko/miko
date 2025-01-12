@@ -1,0 +1,91 @@
+[app]
+
+; dev 
+; test 
+; prod 
+environment = dev
+
+bcnet = testnet
+
+; log path
+log_path = ./logs
+resource_path = ./resource
+templates = ./templates
+
+; listen address
+host = 127.0.0.1
+port = 8040
+
+login_key = 00000000000000000000000000000000
+
+; used to encrypt parameters, such as OG sharing parameters
+param_key = 00000000000000000000000000000000
+
+; internal interface verification
+sec_key = 00000000000000000000000000000000
+
+[twitter]
+
+; Twitter user authorization related begin
+; twitter app related
+client_id = 
+client_secret = 
+; callback url
+redirect_uri = 
+code_challenge_method = "plain"
+challenge_key = 
+base_scope = "tweet.read users.read follows.read offline.access"
+tw_metric_refresh_interval = 300
+; Twitter authorization related end
+
+; get Twitter API Token
+api_token = 
+
+[twitter_v1]
+consumer_Key = 
+consumer_secret = 
+callback_url = 
+
+[log]
+
+; output logs based on error level, only logs greater than or equal to this level are output
+; 0 debug 1 info 2 warning 3 error 4 alert
+level = 0
+
+[pg_main]
+
+host = 127.0.0.1
+port = 5432
+user = dev
+password = "password"
+name = aimemory
+
+[db_main]
+
+host = 127.0.0.1
+port = 3306
+user = dev
+password = "password"
+name = aimemory
+
+[rdb_main]
+; main redis service
+
+host = 127.0.0.1
+port = 6379
+password = "password"
+db = 0
+
+[chatgpt]
+api_key = 
+max_tokens = 4000
+temperature = 0
+presence_penalty = -2
+
+[llm]
+save_path = ./llm_files
+
+[aws]
+aws_access_key_id = 
+aws_secret_access_key = 
+region = 
